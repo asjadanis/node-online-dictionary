@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const dictionary = require("./routes/dictionary");
-const logger = require("./middleware/logger");
+const morgan = require("morgan");
 
 dotenv.config();
 
@@ -11,6 +11,11 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+} else {
+  app.use(morgan());
+}
 
 app.use("/api/v1/dictionary", dictionary);
 

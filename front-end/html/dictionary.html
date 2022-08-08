@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/dict.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../js/dict.js"></script>
     <title>Online Dictionary</title>
   </head>
@@ -12,16 +18,20 @@
     <header>
       <h1>WAP Online Dictionary</h1>
     </header>
-    <main>
+    <main class="jumbotron">
       <div>
-        <label>Term: </label>
+        <label class="form-label">Term: </label>
         <input
+          class="form-control"
+          style="display: inline; width: auto"
           id="dictWord"
           type="text"
           required
           placeholder="Enter the word"
         />
-        <button onclick="searchWord()">Look up</button>
+        <button type="button" class="btn btn-primary" onclick="searchWord()">
+          Look up
+        </button>
       </div>
     </main>
     <footer>

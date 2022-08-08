@@ -16,9 +16,11 @@ const getWordFromDictionary = (req, res, next) => {
           .status(404)
           .json({ success: false, data: [], message: "Word not found" });
       }
-      res
-        .status(200)
-        .json({ success: true, data: results, message: "Successfully found" });
+      res.status(200).json({
+        success: true,
+        data: results,
+        message: results.length === 0 ? "Word not found" : "Successfully found",
+      });
     });
   });
 };

@@ -38,8 +38,10 @@ function renderDefinitions(definitions) {
   const parentDiv = document.createElement("div");
   parentDiv.id = "definitions";
   if (definitions.length === 0) {
-    const noResults = document.createElement("h2");
+    const noResults = document.createElement("div");
     noResults.innerText = "Sorry No Results Found";
+    noResults.className = "alert alert-primary";
+    noResults.role = "alert";
     parentDiv.appendChild(noResults);
   }
   definitions.forEach((def, index) => {

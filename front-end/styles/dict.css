@@ -1,0 +1,33 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+body {
+  background-color: a;
+}
+
+main {
+  margin: 20px;
+}
+
+header {
+  text-align: center;
+  background-color: dodgerblue;
+}
+
+#definitions {
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#container {
+  display: flex;
+  align-items: baseline;
+}
+
+#container > div {
+  margin: 5px;
+}

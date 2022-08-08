@@ -11,11 +11,24 @@ body {
 
 main {
   margin: 20px;
+  text-align: center;
 }
 
 header {
   text-align: center;
   background-color: dodgerblue;
+}
+
+#dictWord:hover {
+  border-image: none;
+  border-color: dodgerblue;
+  background-color: lightgray;
+}
+
+#dictWord:active {
+  border-image: none;
+  border-color: dodgerblue;
+  background-color: lightgray;
 }
 
 #definitions {
@@ -27,6 +40,7 @@ header {
 #container {
   display: flex;
   align-items: baseline;
+  text-align: initial;
 }
 
 #container > div {

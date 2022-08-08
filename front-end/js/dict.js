@@ -8,7 +8,7 @@ document.onkeydown = function (e) {
 async function searchWord() {
   const word = document.getElementById("dictWord").value;
   if (!word) {
-    return alert("Word is required !!!");
+    return alert("Please enter a word to search the dictionary !!!");
   }
   try {
     const descriptions = await fetchWordFromDictionary(word);

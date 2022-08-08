@@ -13,9 +13,11 @@ async function searchWord() {
   try {
     const descriptions = await fetchWordFromDictionary(word);
     console.log(descriptions);
+    document.getElementById("spinner").style.display = "inline-block";
     renderDefinitions(descriptions);
   } catch (e) {
     console.error(e);
+    document.getElementById("spinner").style.display = "none";
     alert("Sorry Something Went Wrong!!!");
   }
 }
@@ -58,4 +60,5 @@ function renderDefinitions(definitions) {
   });
   const mainElement = document.getElementsByTagName("main")[0];
   mainElement.append(parentDiv);
+  document.getElementById("spinner").style.display = "none";
 }

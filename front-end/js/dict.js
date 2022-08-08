@@ -1,3 +1,10 @@
+document.onkeydown = function (e) {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    searchWord();
+  }
+};
+
 async function searchWord() {
   const word = document.getElementById("dictWord").value;
   if (!word) {

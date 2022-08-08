@@ -1,7 +1,7 @@
 async function searchWord() {
   const word = document.getElementById("dictWord").value;
   if (!word) {
-    alert("Word is required !!!");
+    return alert("Word is required !!!");
   }
   try {
     const descriptions = await fetchWordFromDictionary(word);
